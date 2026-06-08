@@ -113,7 +113,11 @@ export function isContractConfigured(): boolean {
 }
 
 export function explorerTxUrl(hash: string): string {
-  return `https://studio.genlayer.com/transactions/${hash}`;
+  return `https://explorer-studio.genlayer.com/tx/${hash}`;
+}
+
+export function explorerAddrUrl(addr: string): string {
+  return `https://explorer-studio.genlayer.com/address/${addr}`;
 }
 
 let _client: ReturnType<typeof createClient> | null = null;
