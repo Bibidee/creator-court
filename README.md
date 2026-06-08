@@ -7,6 +7,13 @@ Creator Court is a GenLayer-native protocol where creators register original wor
 
 This is **not** a legal copyright court. It is **not** a takedown engine. It is public proof and a structured dispute layer.
 
+## Live deployment
+
+- **Network**: GenLayer Studionet (chain id `61999`)
+- **RPC**: `https://studio.genlayer.com/api`
+- **Explorer**: https://explorer-studio.genlayer.com
+- **CreatorCourt contract**: [`0xfB78A172dD886E4fC9a378120EFe1B1983c1582E`](https://explorer-studio.genlayer.com/address/0xfB78A172dD886E4fC9a378120EFe1B1983c1582E)
+
 ## Why GenLayer
 
 Originality disputes need judgement over messy evidence: wording, timeline, structure, credit, common idea defences, weak claims. A standard smart contract cannot do that. GenLayer validators read the case, the response, and the evidence pack, and converge on a structured JSON verdict via `gl.eq_principle_strict_eq`. Only IDs, CIDs, hashes, statuses, and verdict summaries live on-chain.
@@ -69,7 +76,7 @@ Copy `.env.example` to `.env.local` and fill in:
 
 ```
 NEXT_PUBLIC_GENLAYER_RPC_URL=https://studio.genlayer.com:8443/api
-NEXT_PUBLIC_CREATOR_COURT_CONTRACT_ADDRESS=0x...   # set after deploy
+NEXT_PUBLIC_CREATOR_COURT_CONTRACT_ADDRESS=0xfB78A172dD886E4fC9a378120EFe1B1983c1582E
 PINATA_JWT=eyJ...                                  # server-only, NEVER prefix with NEXT_PUBLIC_
 NEXT_PUBLIC_APP_URL=http://localhost:3000
 ```
