@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+html, body { background-color: #050816; color: #F8FAFC; }
+
+body {
+  font-feature-settings: "ss01", "cv11";
+  background-image:
+    radial-gradient(1200px 600px at 20% -10%, rgba(34,211,238,0.10), transparent 60%),
+    radial-gradient(900px 500px at 90% 0%, rgba(139,92,246,0.12), transparent 60%),
+    linear-gradient(180deg, #050816 0%, #050816 100%);
+  min-height: 100vh;
+}
+
+.glass {
+  background: linear-gradient(180deg, rgba(17,22,42,0.85), rgba(11,16,32,0.85));
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+}
+
+.hairline { border: 1px solid rgba(255,255,255,0.06); }
+
+.cyber-border {
+  position: relative;
+}
+.cyber-border::before {
+  content: "";
+  position: absolute; inset: -1px; border-radius: inherit; pointer-events: none;
+  background: linear-gradient(135deg, rgba(34,211,238,0.5), rgba(139,92,246,0.5));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  padding: 1px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #67E8F9 0%, #A78BFA 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
